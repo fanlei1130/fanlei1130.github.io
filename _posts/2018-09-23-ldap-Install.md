@@ -111,8 +111,8 @@ objectClass: olcDatabaseConfig
 objectClass: olcHdbConfig
 olcDatabase: {2}hdb
 olcDbDirectory: /var/lib/ldap
-olcSuffix: dc=sinocbd,dc=local                      # 更改dc
-olcRootDN: cn=Manager,dc=sinocbd,dc=local           # 更改dc
+olcSuffix: dc=sitoi,dc=cn                      # 更改dc
+olcRootDN: cn=Manager,dc=sitoi,dc=cn           # 更改dc
 olcRootPW: {SSHA}37kYCk8iLCmIrGnRvLc7XLAuPqftFUF/   # 添加该行（密码）
 olcDbIndex: objectClass eq,pres
 olcDbIndex: ou,cn,mail,surname,givenname eq,pres,sub
@@ -123,8 +123,8 @@ createTimestamp: 20180920082518Z
 entryCSN: 20180920082518.739419Z#000000#000#000000
 modifiersName: cn=config
 modifyTimestamp: 20180920082518Z
-olcAccess: {0}to attrs=userPassword by self write by dn.base="cn=Manager,dc=sinocbd,dc=local" write by anonymous auth by * none   # 添加该行
-olcAccess: {1}to * by dn.base="cn=Manager,dc=sinocbd,dc=local" write by self write by * read                                      # 添加该行
+olcAccess: {0}to attrs=userPassword by self write by dn.base="cn=Manager,dc=sitoi,dc=cn" write by anonymous auth by * none   # 添加该行
+olcAccess: {1}to * by dn.base="cn=Manager,dc=sitoi,dc=cn" write by self write by * read                                      # 添加该行
 ```
 
 
@@ -140,7 +140,7 @@ dn: olcDatabase={1}monitor
 objectClass: olcDatabaseConfig
 olcDatabase: {1}monitor
 olcAccess: {0}to * by dn.base="gidNumber=0+uidNumber=0,cn=peercred,cn=extern
- al,cn=auth" read by dn.base="cn=Manager,dc=sinocbd,dc=local" read by * none    # 修改dc信息
+ al,cn=auth" read by dn.base="cn=Manager,dc=sitoi,dc=cn" read by * none    # 修改dc信息
 structuralObjectClass: olcDatabaseConfig
 entryUUID: 73e77bbe-50fa-1038-9bfc-9bfcf0927062
 creatorsName: cn=config
@@ -173,17 +173,17 @@ vim base.ldif
 ```
 
 ```vim
-dn: dc=sinocbd,dc=local
+dn: dc=sitoi,dc=cn
 objectClass: dcObject
 objectClass: organization
-dc: sinocbd
-o : sinocbd
+dc: sitoi
+o : sitoi
 
-dn: ou=People,dc=sinocbd,dc=local
+dn: ou=People,dc=sitoi,dc=cn
 objectClass: organizationalUnit
 ou: People
 
-dn: ou=Group,dc=sinocbd,dc=local
+dn: ou=Group,dc=sitoi,dc=cn
 objectClass: organizationalUnit
 ou: Group
 ```
@@ -191,7 +191,7 @@ ou: Group
 #### 执行导入
 
 ```bash
-ldapadd -x -D cn=Manager,dc=sinocbd,dc=local -w sinocbd  -f base.ldif
+ldapadd -x -D cn=Manager,dc=sitoi,dc=cn -w sitoi  -f base.ldif
 ```
 
 
@@ -204,10 +204,10 @@ vim /usr/share/migrationtools/migrate_common.ph
 #### 更改以下配置
 ```vim
 # Default DNS domain
-$DEFAULT_MAIL_DOMAIN = "sinocbd.local";
+$DEFAULT_MAIL_DOMAIN = "sitoi.cn";
 
 # Default base
-$DEFAULT_BASE = "dc=sinocbd,dc=local";
+$DEFAULT_BASE = "dc=sitoi,dc=cn";
 ```
 
 ### 导入系统用户和组
@@ -225,9 +225,9 @@ $DEFAULT_BASE = "dc=sinocbd,dc=local";
 > 需要输入管理员密码
 
 ```bash
-ldapadd -x -D "cn=Manager,dc=sinocbd,dc=local" -w sinocbd -f /tmp/base.ldif
-ldapadd -x -D "cn=Manager,dc=sinocbd,dc=local" -w sinocbd -f /tmp/group.ldif
-ldapadd -x -D "cn=Manager,dc=sinocbd,dc=local" -w sinocbd -f /tmp/passwd.ldif
+ldapadd -x -D "cn=Manager,dc=sitoi,dc=cn" -w sitoi -f /tmp/base.ldif
+ldapadd -x -D "cn=Manager,dc=sitoi,dc=cn" -w sitoi -f /tmp/group.ldif
+ldapadd -x -D "cn=Manager,dc=sitoi,dc=cn" -w sitoi -f /tmp/passwd.ldif
 ```
 
 ### 重启服务

@@ -37,25 +37,25 @@ ldapsearch 实用程序可打开与 LDAP 服务器的连接，使用过滤器 fi
 ###### 查询所有用户
 
 ```bash
-ldapsearch -x -b "dc=sinocbd,dc=local" -H ldap://192.168.1.143
+ldapsearch -x -b "dc=sitoi,dc=cn" -H ldap://192.168.1.143
 ```
 
 ###### 指定条件的查询
 
 ```bash
-ldapsearch -x -b "dc=sinocbd,dc=local" "uid=demo" -H ldap://192.168.1.143
+ldapsearch -x -b "dc=sitoi,dc=cn" "uid=demo" -H ldap://192.168.1.143
 ```
 
 ###### 或条件查询配合正则匹配
 
 ```bash
-ldapsearch -x -b "dc=sinocbd,dc=local" "(|(uid=*de*)(cn=*Ada Cather*))" -H ldap://192.168.1.143
+ldapsearch -x -b "dc=sitoi,dc=cn" "(|(uid=*de*)(cn=*Ada Cather*))" -H ldap://192.168.1.143
 ```
 
 ###### 与条件查询配合正则匹配
 
 ```bash
-ldapsearch -x -b "dc=sinocbd,dc=local" "(&(uid=*de*)(cn=*Ada Cather*))" -H ldap://192.168.1.143
+ldapsearch -x -b "dc=sitoi,dc=cn" "(&(uid=*de*)(cn=*Ada Cather*))" -H ldap://192.168.1.143
 ```
 
 
@@ -76,8 +76,8 @@ ldapadd 实用程序是作为到 ldapmodify 工具的硬链接实现的。当作
 **例子**
 
 ```bash
-ldapadd -x -D "cn=root,dc=starxing,dc=com" -w secret -f demo.ldif
-ldapadd -x -D "cn=root,dc=starxing,dc=com" -w secret (这样写就是在命令行添加条目)
+ldapadd -x -D "cn=root,dc=sitoi,dc=cn" -w sitoi -f demo.ldif
+ldapadd -x -D "cn=root,dc=sitoi,dc=cn" -w sitoi (这样写就是在命令行添加条目)
 ```
 
 
@@ -104,7 +104,7 @@ ldapmodify 实用程序可打开与 LDAP 服务器的连接，修改条目密码
 **例子**
 
 ```bash
-ldappasswd -x -D 'cm=root,dc=it,dc=com' -w secret 'uid=zyx,dc=it,dc=com' -S
+ldappasswd -x -D 'cm=root,dc=sitoi,dc=cn' -w sitoi 'uid=shitao,dc=sitoi,dc=cn' -S
 ```
 
 ```text
@@ -146,7 +146,7 @@ ldapadd 和 ldapmodify 都拒绝同一条目的重复属性名/值对。
 **例子**
 
 ```bash
-ldapmodify -x -D "cn=root,dc=it,dc=com" -W -f modify.ldif
+ldapmodify -x -D "cn=root,dc=sitoi,dc=cn" -W -f modify.ldif
 ```
 将 `modify.ldif` 中的记录 更新 原有的记录。
 
@@ -171,7 +171,7 @@ ldapadd 和 ldapmodify 都拒绝同一条目的重复属性名/值对。
 **例子**
 
 ```bash
-ldapdelete -x -D "cn=Manager,dc=sinocbd,dc=local" -w sinocbd "uid=wangq,ou=People,dc=sinocbd,dc=local"
+ldapdelete -x -D "cn=Manager,dc=sitoi,dc=cn" -w sitoi "uid=shitao,ou=People,dc=sitoi,dc=cn"
 ```
 
 > Tips:
