@@ -12,8 +12,7 @@ tags:
     - 安装教程
 ---
 
-# LDAP install
-
+# LDAP 安装教程
 
 在centos7上安装OpenLDAP
 

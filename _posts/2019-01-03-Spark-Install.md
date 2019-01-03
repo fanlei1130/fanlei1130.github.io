@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Spark Install"
+title:      "Spark 安装教程"
 subtitle:   ""
 date:       2019-01-03 23:09:00
 author:     "Shitao"
@@ -14,14 +14,14 @@ tags:
 ---
 
 
-# Spark 安装
+# Spark 安装教程
 
-## 安装环境：
+## 安装环境
 
 - Fedora 29
 - openjdk version "1.8.0_191"
 
-## 安装步骤：
+## 安装步骤
 
 1. 下载 `Spark` 安装包
 2. 解压 `Spark` 安装包 `/opt/spark` 目录
