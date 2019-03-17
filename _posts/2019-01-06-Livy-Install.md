@@ -3,7 +3,7 @@ layout:     post
 title:      "Livy 安装教程"
 subtitle:   ""
 date:       2019-01-06 20:57:00
-author:     "Shitao"
+author:     "Sitoi"
 header-img: ""
 catalog:    true
 tags:

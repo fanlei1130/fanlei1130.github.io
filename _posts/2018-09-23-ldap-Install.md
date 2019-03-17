@@ -3,7 +3,7 @@ layout:     post
 title:      "OpenLDAP 安装教程"
 subtitle:   ""
 date:       2018-09-23 12:00:00
-author:     "Shitao"
+author:     "Sitoi"
 header-img: ""
 catalog:    true
 tags:

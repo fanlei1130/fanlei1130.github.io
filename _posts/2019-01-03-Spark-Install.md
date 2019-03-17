@@ -3,7 +3,7 @@ layout:     post
 title:      "Spark 安装教程"
 subtitle:   ""
 date:       2019-01-03 23:09:00
-author:     "Shitao"
+author:     "Sitoi"
 header-img: ""
 catalog:    true
 tags:

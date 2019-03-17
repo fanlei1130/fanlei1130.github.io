@@ -3,7 +3,7 @@ layout:     post
 title:      "Hadoop 安装教程"
 subtitle:   ""
 date:       2019-01-07 22:36:00
-author:     "Shitao"
+author:     "Sitoi"
 header-img: ""
 catalog:    true
 tags:

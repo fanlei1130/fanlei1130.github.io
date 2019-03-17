@@ -3,7 +3,7 @@ layout:     post
 title:      "OpenLDAP Command"
 subtitle:   ""
 date:       2018-09-24 12:00:00
-author:     "Shitao"
+author:     "Sitoi"
 header-img: ""
 catalog:    true
 tags:
@@ -104,7 +104,7 @@ ldapmodify 实用程序可打开与 LDAP 服务器的连接，修改条目密码
 **例子**
 
 ```bash
-ldappasswd -x -D 'cm=root,dc=sitoi,dc=cn' -w sitoi 'uid=shitao,dc=sitoi,dc=cn' -S
+ldappasswd -x -D 'cm=root,dc=sitoi,dc=cn' -w sitoi 'uid=Sitoi,dc=sitoi,dc=cn' -S
 ```
 
 ```text
@@ -171,7 +171,7 @@ ldapadd 和 ldapmodify 都拒绝同一条目的重复属性名/值对。
 **例子**
 
 ```bash
-ldapdelete -x -D "cn=Manager,dc=sitoi,dc=cn" -w sitoi "uid=shitao,ou=People,dc=sitoi,dc=cn"
+ldapdelete -x -D "cn=Manager,dc=sitoi,dc=cn" -w sitoi "uid=Sitoi,ou=People,dc=sitoi,dc=cn"
 ```
 
 > Tips:
