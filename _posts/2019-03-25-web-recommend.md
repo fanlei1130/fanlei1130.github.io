@@ -4,7 +4,7 @@ title:      "网站 & APP 安利"
 subtitle:   ""
 date:       2019-03-25 18:46:00
 author:     "Sitoi"
-header-img: "img/images/web&app.png"
+header-img: "img/images/web&app.jpg"
 catalog:    true
 tags:
     - 资源
@@ -38,6 +38,7 @@ tags:
 描述：App Store 搜：韩剧TV，IOS 上专门看韩剧的 APP；多分辨率；支持离线下载
 
 ---
+
 # 网站
 
 ### 影视类
@@ -125,7 +126,7 @@ tags:
 
 描述：海量 IOS 破解软件，旧版本 APP 下载
 
-##### Tweakbox
+##### TweakBoxApp
 
 地址：[https://www.tweakboxapp.com](https://www.tweakboxapp.com)
 
