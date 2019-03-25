@@ -50,7 +50,7 @@ kramdown:
 
 
 # Disqus settings
-disqus_username: sitoi
+disqus_username:
 
 # Gitalk
 gitalk:
