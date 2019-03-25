@@ -19,17 +19,24 @@ tags:
 
 ### 影视类
 
-- 影视大院：https://www.vfans.fun
+##### 影视大院
 
-    > 没有上架应用商店，需要安装信任企业证书，VIP资源视频等；多分辨率；支持离线下载
+地址：https://www.vfans.fun
 
-- 麻花影视：https://www.imahua.tv
+描述：没有上架应用商店，需要安装信任企业证书，VIP资源视频等；多分辨率；支持离线下载
 
-    > App Store 搜：麻花播放器，院线热播电影，VIP资源视频等；多分辨率；支持离线下载
 
-- 韩剧  TV： http://t.cn/ExyOqi1
+##### 麻花影视
 
-    > App Store 搜：韩剧TV，IOS 上专门看韩剧的 APP；多分辨率；支持离线下载
+地址：https://www.imahua.tv
+
+描述：App Store 搜：麻花播放器，院线热播电影，VIP资源视频等；多分辨率；支持离线下载
+
+##### 韩剧 TV
+
+地址：http://t.cn/ExyOqi1
+
+描述：App Store 搜：韩剧TV，IOS 上专门看韩剧的 APP；多分辨率；支持离线下载
 
 # 网站
 
