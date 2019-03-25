@@ -50,7 +50,7 @@ kramdown:
 
 
 # Disqus settings
-disqus_username: Sitoi
+disqus_username: sitoi
 
 # Netease settings
 netease_comment: false
@@ -58,12 +58,12 @@ netease_comment: false
 
 
 # Analytics settings
-# Baidu Analytics 
-# ba_track_id: [your track id]
+# Baidu Analytics
+ba_track_id: d4c40f46c05ffceaf7416ed88be4e462
 
 # Google Analytics
-#ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-#ga_domain: huangxuan.me
+ga_track_id: 'UA-136865061-1'            # Format: UA-xxxxxx-xx
+ga_domain: sitoi.cn
 
 
 

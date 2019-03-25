@@ -15,7 +15,7 @@ tags:
 ---
 
 
-# Spark 安装教程
+# Spark 安装
 
 ## 安装环境
 
@@ -29,19 +29,19 @@ tags:
 3. 修改 `Spark` 配置
 4. 修改 `PySpark` 配置
 
-### 下载 `Spark` 安装包
+### 下载 Spark 安装包
 
 下载地址：`http://spark.apache.org/downloads.html`
 
-### 解压 `Spark` 安装包 `/opt/spark` 目录
+### 解压 Spark 安装包 /opt/spark 目录
 
-##### 创建 `/opt/spark` 目录
+##### 创建 /opt/spark 目录
 
 ```bash
 sudo mkdir -p /opt/spark
 ```
 
-##### 解压到  `/opt/spark` 目录
+##### 解压到 /opt/spark 目录
 
 ```bash
 cd /opt
@@ -49,9 +49,9 @@ sudo tar -zxvf ~/Downloads/spark-2.3.0-bin-hadoop2.7.tgz
 sudo mv /opt/spark-2.3.0-bin-hadoop2.7 /opt/spark
 ```
 
-### 修改 `Spark` 配置
+### 修改 Spark 配置
 
-#### 修改 `Spark` 环境变量
+#### 修改 Spark 环境变量
 
 ```bash
 sudo vim ~/.bashrc
@@ -72,15 +72,15 @@ source ~/.bashrc
 ```
 
 
-### 安装 `PySpark`
+### 安装 PySpark
 
 ```bash
 pip3 install pyspark
 ```
 
-### 修改 `PySpark` 配置
+### 修改 PySpark 配置
 
-##### 修改 `PySpark` 环境变量
+##### 修改 PySpark 环境变量
 
 ```bash
 sudo vim ~/.bashrc

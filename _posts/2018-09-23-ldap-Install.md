@@ -48,7 +48,7 @@ node02 IP：192.168.1.146 client端
 yum install openldap-servers openldap-clients migrationtools
 ```
 
-### 拷贝DB_CONFIG文件
+### 拷贝 DB_CONFIG 文件
 
 ```bash
 cp /usr/share/openldap-servers/DB_CONFIG.example /var/lib/ldap/DB_CONFIG
@@ -60,7 +60,7 @@ cp /usr/share/openldap-servers/DB_CONFIG.example /var/lib/ldap/DB_CONFIG
 chown -R ldap. /var/lib/ldap/
 ```
 
-### 创建LDAP管理员密码
+### 创建 LDAP 管理员密码
 
 ```bash
 slappasswd
@@ -110,9 +110,9 @@ objectClass: olcDatabaseConfig
 objectClass: olcHdbConfig
 olcDatabase: {2}hdb
 olcDbDirectory: /var/lib/ldap
-olcSuffix: dc=sitoi,dc=cn                      # 更改dc
-olcRootDN: cn=Manager,dc=sitoi,dc=cn           # 更改dc
-olcRootPW: {SSHA}37kYCk8iLCmIrGnRvLc7XLAuPqftFUF/   # 添加该行（密码）
+olcSuffix: dc=sitoi,dc=cn                                       # 更改dc
+olcRootDN: cn=Manager,dc=sitoi,dc=cn                            # 更改dc
+olcRootPW: {SSHA}37kYCk8iLCmIrGnRvLc7XLAuPqftFUF/               # 添加该行（密码）
 olcDbIndex: objectClass eq,pres
 olcDbIndex: ou,cn,mail,surname,givenname eq,pres,sub
 structuralObjectClass: olcHdbConfig
@@ -150,7 +150,7 @@ modifyTimestamp: 20180920082518Z
 ```
 
 
-### 启动并设置开机启动slapd服务
+### 启动并设置开机启动 slapd 服务
 
 ```bash
 systemctl enable slapd.service
@@ -158,14 +158,14 @@ systemctl start slapd.service
 ```
 
 
-### 导入基本Schema
+### 导入基本 Schema
 ```bash
 ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/cosine.ldif
 ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/nis.ldif
 ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/inetorgperson.ldif
 ```
 
-### 导入base.ldif文件
+### 导入 base.ldif 文件
 
 ```bash
 vim base.ldif
@@ -194,7 +194,7 @@ ldapadd -x -D cn=Manager,dc=sitoi,dc=cn -w sitoi  -f base.ldif
 ```
 
 
-### 配置migrationtools
+### 配置 migrationtools
 
 ```
 vim /usr/share/migrationtools/migrate_common.ph
@@ -211,7 +211,7 @@ $DEFAULT_BASE = "dc=sitoi,dc=cn";
 
 ### 导入系统用户和组
 
-####  利用pl脚本将/etc/passwd 和/etc/shadow生成LDAP能读懂的文件格式，保存在/tmp/下
+####  利用 pl 脚本将 /etc/passwd 和 /etc/shadow 生成 LDAP 能读懂的文件格式，保存在 /tmp/ 下
 
 ```bash
 /usr/share/migrationtools/migrate_base.pl > /tmp/base.ldif
@@ -219,7 +219,7 @@ $DEFAULT_BASE = "dc=sitoi,dc=cn";
 /usr/share/migrationtools/migrate_group.pl /etc/group > /tmp/group.ldif
 ```
 
-#### 导入LDAP
+#### 导入 LDAP
 
 > 需要输入管理员密码
 
@@ -235,7 +235,7 @@ ldapadd -x -D "cn=Manager,dc=sitoi,dc=cn" -w sitoi -f /tmp/passwd.ldif
 systemctl restart slapd
 ```
 
-## Client端
+## Client 端
 
 ### TODO
 

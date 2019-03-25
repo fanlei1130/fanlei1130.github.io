@@ -77,7 +77,7 @@ ldapadd 实用程序是作为到 ldapmodify 工具的硬链接实现的。当作
 
 ```bash
 ldapadd -x -D "cn=root,dc=sitoi,dc=cn" -w sitoi -f demo.ldif
-ldapadd -x -D "cn=root,dc=sitoi,dc=cn" -w sitoi (这样写就是在命令行添加条目)
+ldapadd -x -D "cn=root,dc=sitoi,dc=cn" -w sitoi #(这样写就是在命令行添加条目)
 ```
 
 

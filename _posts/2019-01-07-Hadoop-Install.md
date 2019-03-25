@@ -17,14 +17,14 @@ tags:
 ---
 
 
-# Hadoop 安装教程
+# Hadoop 单机安装步骤
 
-## 安装环境：
+## 安装环境
 
 - Fedora 29
 - openjdk version "1.8.0_191"
 
-## 安装步骤：
+## 安装步骤
 
 - 创建 `Hadoop` 帐号
 - 下载 `Hadoop` 安装包
@@ -34,16 +34,15 @@ tags:
 - 启动集群
 - 查看状态
 
-### 创建 `Hadoop` 帐号
+### 创建 Hadoop 帐号
 
-##### 为 `Hadoop` 创建一个专门的账号
-
+##### 为 Hadoop 创建一个专门的账号
 ```bash
 sudo adduser hadoop
 sudo passwd hadoop
 ```
 
-##### 授予 `Hadoop` `root` 权限
+##### 授予 Hadoop root 权限
 
 > 为了测试，图方便，这里给Hadoop root权限，生产环境不建议这样做。
 
@@ -65,7 +64,7 @@ hadoop  ALL=(ALL) ALL
 su hadoop
 ```
 
-##### 配置SSH无密码登录
+##### 配置 SSH 无密码登录
 
 **首先生成公私密钥对**
 
@@ -76,13 +75,13 @@ ssh-keygen -t rsa
 > 指定 `key pair` 的存放位置
 > 回车默认存放于/home/hadoop/.ssh/id_rsa输入passphrase，这里直接回车，为空，确保无密码可登陆。
 
-**拷贝生成的公钥到授权key文件（authorized_keys)**
+**拷贝生成的公钥到授权 key 文件（authorized_keys)**
 
 ```bash
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 ```
 
-**改变key权限为拥有者可读可写（0600）**
+**改变 key 权限为拥有者可读可写（0600）**
 
 ```bash
 chmod 0600 ~/.ssh/authorized_keys
@@ -102,20 +101,20 @@ chmod 777 file – all can read, write and execute
 ssh localhost
 ```
 
-### 下载 `Hadoop` 安装包
+### 下载 Hadoop 安装包
 
 ```bash
 cd ~
-wget http://mirror.bit.edu.cn/apache/hadoop/common/hadoop-3.1.1/hadoop-3.1.1.tar.gz
+wget http://192.168.1.60/apache/hadoop/common/hadoop-3.0.1/hadoop-3.0.1.tar.gz
 ```
 
-### 解压 `Hadoop` 安装包
+### 解压 Hadoop 安装包
 
-> 最好做个关联 `ln -s hadoop-3.1.1 hadoop`
+> 最好做个关联 `ln -s hadoop-3.0.1 hadoop`
 
-```
-tar -zxvf hadoop-3.1.1.tar.gz
-mv hadoop-3.1.1 hadoop
+```bash
+tar -zxvf hadoop-3.0.1.tar.gz
+mv hadoop-3.0.1 hadoop
 ```
 
 ### 配置环境变量
@@ -147,7 +146,7 @@ export JAVA_LIBRARY_PATH=$HADOOP_HOME/lib/native
 source ~/.bashrc
 ```
 
-### 配置 `Hadoop` 文件
+### 配置 Hadoop 文件
 
 修改 `hadoop/core-site.xml` 配置文件
 
@@ -229,14 +228,14 @@ vim $HADOOP_HOME/etc/hadoop/yarn-site.xml
 
 ### 启动集群
 
-##### 格式化Hadoop文件系统
+##### 格式化 Hadoop 文件系统
 
 ```bash
 hdfs namenode -format
 ```
 
 
-##### 启动HDFS
+##### 启动 HDFS
 
 ```
 $HADOOP_HOME/sbin/start-dfs.sh
@@ -254,7 +253,7 @@ vim $HADOOP_HOME/etc/hadoop/hadoop-env.sh
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 ```
 
-##### 启动YARN：
+##### 启动 YARN
 
 ```bash
 $HADOOP_HOME/sbin/start-yarn.sh
