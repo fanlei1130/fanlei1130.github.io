@@ -52,6 +52,17 @@ kramdown:
 # Disqus settings
 disqus_username: sitoi
 
+# Gitalk
+gitalk:
+  enable: true
+  clientID: 1b0731e0808d896e90d0
+  clientSecret: 87469f10106f36b678ce27fb55b8c9c75fe31799
+  repo: Sitoi.github.io
+  owner: sitoi
+  admin: sitoi
+  distractionFreeMode: true
+
+
 # Netease settings
 netease_comment: false
 
@@ -70,7 +81,7 @@ ga_domain: sitoi.cn
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "那些你很冒险的梦<br>我陪你去疯"
-sidebar-avatar: /img/avatar-ny.jpg    # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/avatar-ny.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
