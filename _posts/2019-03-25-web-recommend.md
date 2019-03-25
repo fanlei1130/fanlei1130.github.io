@@ -4,7 +4,7 @@ title:      "网站 & APP 安利"
 subtitle:   ""
 date:       2019-03-25 18:46:00
 author:     "Sitoi"
-header-img: ""
+header-img: "img/images/web&app.png"
 catalog:    true
 tags:
     - 资源
@@ -48,7 +48,7 @@ tags:
 
 描述：美剧、日剧、韩剧、动漫、院线电影等资源论坛（免费）；支持百度网盘
 
-##### FIX字幕侠
+##### FIX 字幕侠
 
 地址：[http://www.zimuxia.cn](http://www.zimuxia.cn/)
 
@@ -78,13 +78,13 @@ tags:
 
 描述：电影、电视剧、综艺、动漫；支持在线播放，不支持下载
 
-##### BT电影天堂
+##### BT 电影天堂
 
 地址：[http://www.btbtdy.tv/index.php](http://www.btbtdy.tv/index.php)
 
 描述：电影、电视剧、动漫；支持在线播放，磁力链接
 
-##### 91美剧网
+##### 91 美剧网
 
 地址：[https://91mjw.com](https://91mjw.com)
 
@@ -133,6 +133,6 @@ tags:
 
 ##### 点火
 
-地址：[http://ignition.fun](http://ignition.fun])
+地址：[http://ignition.fun](http://ignition.fun)
 
 描述：海量 IOS 破解软件，旧版本 APP 下载
