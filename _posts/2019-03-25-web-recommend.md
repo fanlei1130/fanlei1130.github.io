@@ -21,7 +21,7 @@ tags:
 
 ##### 影视大院
 
-地址：https://www.vfans.fun
+地址：[https://www.vfans.fun](https://www.vfans.fun)
 
 描述：没有上架应用商店，需要安装信任企业证书，VIP资源视频等；多分辨率；支持离线下载
 
