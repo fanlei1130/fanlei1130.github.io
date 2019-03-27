@@ -51,9 +51,6 @@ kramdown:
 
 
 
-# Disqus settings
-#disqus_username:
-
 # Gitalk
 gitalk:
   enable: true
@@ -63,11 +60,6 @@ gitalk:
   owner: sitoi
   admin: sitoi
   distractionFreeMode: true
-
-
-# Netease settings
-#netease_comment: false
-
 
 
 # Analytics settings
@@ -86,7 +78,6 @@ sidebar-about-description: "那些你很冒险的梦<br>我陪你去疯"
 sidebar-avatar: /img/avatar-ny.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
-
 # Featured Tags
 featured-tags: true                     # whether or not using Feature-Tags
 featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
@@ -100,7 +91,7 @@ service-worker: false
 
 
 # MathJax rendering for layout:page (e.g. post preview)
-page-mathjax: true
+page-mathjax: false
 
 
 # Friends
