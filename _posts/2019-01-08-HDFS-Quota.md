@@ -1,3 +1,23 @@
+---
+layout:     post
+title:      "HDFS 配额教程"
+subtitle:   ""
+date:       2019-01-08 21:36:00
+author:     "Sitoi"
+header-img: ""
+catalog:    true
+tags:
+    - Hadoop
+    - 教程
+    - 配额
+    - 大数据
+    - Apache
+    - 分布式
+    - HDFS
+    - MapReduce
+---
+
+
 # 名称配额（Name Quota）
 
 名称配额是在对应的目录下所有文件和目录名称的数量上的限制。
