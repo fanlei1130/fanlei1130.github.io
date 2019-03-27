@@ -52,7 +52,7 @@ kramdown:
 
 
 # Disqus settings
-disqus_username:
+#disqus_username:
 
 # Gitalk
 gitalk:
