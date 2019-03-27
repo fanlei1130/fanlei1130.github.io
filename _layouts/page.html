@@ -40,7 +40,7 @@ layout: default
                 <h5><a href="{{'/tags/' | prepend: site.baseurl }}">FEATURED TAGS</a></h5>
                 <div class="tags">
                     {% for tag in site.tags %}
-                    {% if tag[1].size > site.featured-condition-size %}
+                    {% if tag[1].size > {{site.featured-condition-size}} %}
                     <a href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
                         {{ tag[0] }}
                     </a>
@@ -89,7 +89,7 @@ layout: default
                 <h5><a href="{{'/tags/' | prepend: site.baseurl }}">FEATURED TAGS</a></h5>
                 <div class="tags">
                     {% for tag in site.tags %}
-                    {% if tag[1].size > site.featured-condition-size %}
+                    {% if tag[1].size > {{site.featured-condition-size}} %}
                     <a href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
                         {{ tag[0] }}
                     </a>
@@ -105,7 +105,9 @@ layout: default
                 <h5><a href="{{'/about/' | prepend: site.baseurl }}">ABOUT ME</a></h5>
                 <div class="short-about">
                     {% if site.sidebar-avatar %}
-                    <img src="{{site.sidebar-avatar}}"/>
+                    <a href="{{ site.baseurl }}/about">
+                        <img src="{{site.sidebar-avatar}}"/>
+                    </a>
                     {% endif %}
                     {% if site.sidebar-about-description %}
                     <p>{{site.sidebar-about-description}}</p>
@@ -118,6 +120,17 @@ layout: default
                             <span class="fa-stack fa-lg">
                                         <i class="fa fa-circle fa-stack-2x"></i>
                                         <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                    </span>
+                            </a>
+                        </li>
+                        {% endif %}
+                        <!-- add jianshu add target = "_blank" to <a> by BY -->
+                        {% if site.jianshu_username %}
+                        <li>
+                            <a target="_blank" href="https://www.jianshu.com/u/{{ site.jianshu_username }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa  fa-stack-1x fa-inverse">简</i>
                                     </span>
                             </a>
                         </li>
@@ -183,6 +196,9 @@ layout: default
                         </li>
                         {% endif %}
                     </ul>
+                    {% if site.email %}
+                    <p>✉️ {{site.email}}</p>
+                    {% endif %}
                 </div>
             </section>
             <!-- Friends Blog -->

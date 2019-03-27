@@ -5,8 +5,10 @@ header-img: img/home-bg.jpg
 email: Shitao0418@gmail.com
 description: "这里是 Sitoi 的个人博客"
 keyword: "Sitoi,@Sitoi"
-#url: "https://huangxuan.me"              # your host, for absolute URL
-#baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+url: "http://www.sitoi.cn"              # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+github_repo: "https://github.com/Sitoi/Sitoi.github.io.git" # you code repository
+
 
 # Publish posts or collection documents with a future date.
 future: true
@@ -16,7 +18,7 @@ RSS: false
 weibo_username:     Sitoi
 zhihu_username:     Sitoi
 github_username:    Sitoi
-
+jianshu_username:   0289c6c3a717
 
 
 # Build settings
