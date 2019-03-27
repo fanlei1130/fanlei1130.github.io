@@ -38,7 +38,7 @@ FROM alpine:3.8-python-3.6
 #### 维护者信息
 
 ```Dockerfile
-MAINTAINER Shi Tao <shitao@sinocbd.com>
+MAINTAINER Shi Tao <shitao0418@gamil.com>
 ```
 
 #### 镜像操作指令
@@ -84,7 +84,7 @@ FROM alpine:3.8-python-3.6
 **样例**
 
 ```Dockerfile
-MAINTAINER Shi Tao <shitao@zylliondata.com>
+MAINTAINER Shi Tao <shitao0418@gmail.com>
 ```
 
 

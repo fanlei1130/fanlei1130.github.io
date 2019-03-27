@@ -40,7 +40,7 @@ services:
     volumes:
       - ./db/redis:/data
     command: >
-      --requirepass sinocbd
+      --requirepass password
   neo4j:
     image: docker.io/neo4j:3.3
     ports:
