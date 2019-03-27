@@ -72,9 +72,10 @@ mvn install -Dmaven.test.skip=true
 ##### 安装 SparkBench 基准测试组件
 
 > 注： `ubuntu` 系统需要安装以下包:
->> ```bash
-    sudo apt-get install libgfortran3
-    ```
+
+```bash
+sudo apt-get install libgfortran3
+```
 
 克隆项目：[项目地址](https://github.com/SparkTC/spark-bench/tree/legacy)
 
@@ -340,6 +341,6 @@ vim <Workload>/conf/env.sh
 
 ### 相关链接
 
-[开源项目官网](https://github.com/CODAIT/spark-bench/tree/legacy) : https://github.com/CODAIT/spark-bench/tree/legacy
+[开源项目官网](https://github.com/CODAIT/spark-bench/tree/legacy) : [https://github.com/CODAIT/spark-bench/tree/legacy](https://github.com/CODAIT/spark-bench/tree/legacy)
 
-[安装文档](https://blog.csdn.net/xfg0218/article/details/79250019) : https://blog.csdn.net/xfg0218/article/details/79250019
+[安装文档](https://blog.csdn.net/xfg0218/article/details/79250019) : [https://blog.csdn.net/xfg0218/article/details/79250019](https://blog.csdn.net/xfg0218/article/details/79250019)
