@@ -242,4 +242,3 @@ hdfs dfs -put file /shitao/test_quota2/test
 ```
 
 > 可以看到，清除空间配额后，再次成功上传上面的文件了。
-
