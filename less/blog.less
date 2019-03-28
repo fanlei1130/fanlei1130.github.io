@@ -3,6 +3,7 @@
 @import "sidebar.less";
 @import "side-catalog.less";
 @import "snackbar.less";
+@import "highlight.less";
 
 // Global Components
 
@@ -91,7 +92,7 @@ img.shadow {
 
 // Utils Style End
 
-// Select 
+// Select
 select {
   -webkit-appearance: none;
   margin-top: 15px;
@@ -106,8 +107,11 @@ select {
 }
 
 // override table style in bootstrap
-.table th, .table td {
-  border: 1px solid #eee !important;
+table.table > tbody, table.table > thead {
+  th,
+  td {
+    border: 1px solid #eee;
+  }
 }
 
 hr.small {
@@ -117,7 +121,8 @@ hr.small {
   border-color: white;
 }
 
-pre, .table-responsive {
+pre,
+.table-responsive {
   // sometimes you should use vendor-feature.
   -webkit-overflow-scrolling: touch;
 }
@@ -199,13 +204,11 @@ pre code {
   .pager li {
     width: 48%;
     &.next {
-      float: right
+      float: right;
     }
-  ;
     &.previous {
-      float: left
+      float: left;
     }
-  ;
     > a {
       width: 100%;
       > span {
@@ -321,7 +324,7 @@ pre code {
         letter-spacing: 1px;
         // only highlight in mobile
         &:active {
-          background: rgba(0, 0, 0, 0.12)
+          background: rgba(0, 0, 0, 0.12);
         }
       }
     }
@@ -777,7 +780,8 @@ img::-moz-selection {
 
 .tags {
   margin-bottom: -5px;
-  a, .tag {
+  a,
+  .tag {
     display: inline-block;
     border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 999em;
@@ -788,7 +792,8 @@ img::-moz-selection {
     text-decoration: none;
     margin: 0 1px;
     margin-bottom: 6px;
-    &:hover, &:active {
+    &:hover,
+    &:active {
       color: white;
       border-color: white;
       background-color: rgba(255, 255, 255, 0.4);
@@ -812,14 +817,16 @@ img::-moz-selection {
 // tag_cloud
 #tag_cloud {
   margin: 20px 0 15px 0;
-  a, .tag {
+  a,
+  .tag {
     font-size: 14px;
     border: none;
     line-height: 28px;
     margin: 0 2px;
     margin-bottom: 8px;
-    background: #D6D6D6;
-    &:hover, &:active {
+    background: #d6d6d6;
+    &:hover,
+    &:active {
       background-color: #0085a1 !important;
     }
   }
@@ -889,7 +896,7 @@ img::-moz-selection {
       > a {
         > .post-title {
           font-size: 18px;
-          line-height: 1.3
+          line-height: 1.3;
         }
         > .post-subtitle {
           font-size: 14px;
@@ -913,7 +920,8 @@ img::-moz-selection {
 }
 
 .navbar-default .navbar-toggle {
-  &:focus, &:hover {
+  &:focus,
+  &:hover {
     background-color: inherit;
   }
   &:active {
@@ -1028,18 +1036,12 @@ img::-moz-selection {
   opacity: 0.6;
   color: #fff;
 }
-
 .page-fullscreen footer .copyright {
   color: #fff;
 }
-
 .page-fullscreen footer .copyright a {
   color: #fff;
 }
-
 .page-fullscreen footer .copyright a:hover {
   color: #ddd;
 }
-
-
-

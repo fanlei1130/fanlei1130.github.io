@@ -1,4 +1,6 @@
 <!-- Footer -->
+{% include b2t.html %}
+
 <footer>
     <div class="container">
         <div class="row">
@@ -7,7 +9,7 @@
                     {% if site.RSS %}
                     <li>
                         <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
-                        <span class="fa-stack fa-lg">
+                            <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
                             </span>
@@ -87,6 +89,19 @@
                     {% endif %}
                 </ul>
                 <p class="copyright text-muted">
+<!--                  本站总访问量<span id="busuanzi_value_site_pv"></span>次，本站访客数<span id="busuanzi_value_site_uv"></span>人次，本文总阅读量<span id="busuanzi_value_page_pv"></span>次-->
+                    <span class="site-uv" title="总点击人数">
+                    <img src="/img/vendor/octicons/svg/person.svg" width="10" height="16">
+                    <span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+                    &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <span class="site-pv" title="总点击量">
+                    <img src="/img/vendor/octicons/svg/eye.svg" width="16" height="16">
+                    <span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+                    &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <span class="page-pv"title="本页面点击人数">
+                    <img src="/img/vendor/octicons/svg/file-text.svg" width="12" height="16">
+                    <span class="busuanzi-value" id="busuanzi_value_page_pv"></span></span>
+                    <br>
                     Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}
                     <br>
                     Theme on <a href="{{ site.github_repo }}">GitHub</a> |
@@ -102,61 +117,41 @@
         </div>
     </div>
 </footer>
+<!--网站统计-->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 <!-- jQuery -->
 <script src="{{ "/js/jquery.min.js " | prepend: site.baseurl }}"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<
-script
-src = "{{ " / js / bootstrap.min.js
-" | prepend: site.baseurl }}" ></script>
+<script src="{{ "/js/bootstrap.min.js " | prepend: site.baseurl }}"></script>
 
 <!-- Custom Theme JavaScript -->
 <script src="{{ "/js/blog.min.js " | prepend: site.baseurl }}"></script>
 
 <!-- Service Worker -->
-{%
-    if site.service - worker %}
-<
-script
-type = "text/javascript" >
-if (navigator.serviceWorker) {
-    // For security reasons, a service worker can only control the pages that are in the same directory level or below it. That's why we put sw.js at ROOT level.
-    navigator.serviceWorker
-        .register('/sw.js')
-        .then((registration) => {
-            console.log('Service Worker Registered. ', registration)
-        })
-        .catch((error) => {
-            console.log('ServiceWorker registration failed: ', error)
-        })
-}
-</script>
+{% if site.service-worker %}
+<script src="{{ "/js/snackbar.js " | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/sw-registration.js " | prepend: site.baseurl }}"></script>
 {% endif %}
-
 
 <!-- async load function -->
 <script>
     function async(u, c) {
-        var d = document, t = 'script',
-            o = d.createElement(t),
-            s = d.getElementsByTagName(t)[0];
-        o.src = u;
-        if (c) {
-            o.addEventListener('load', function (e) {
-                c(null, e);
-            }, false);
-        }
-        s.parentNode.insertBefore(o, s);
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
     }
 </script>
 
 <!-- jquery.tagcloud.js -->
 <script>
     // only load tagcloud.js in tag.html
-    if ($('#tag_cloud').length !== 0) {
-        async('{{ "/js/jquery.tagcloud.js" | prepend: site.baseurl }}', function () {
+    if($('#tag_cloud').length !== 0){
+        async('{{ "/js/jquery.tagcloud.js" | prepend: site.baseurl }}',function(){
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
                 color: {start: '#bbbbee', end: '#0085a1'},
@@ -168,9 +163,9 @@ if (navigator.serviceWorker) {
 
 <!--fastClick.js -->
 <script>
-    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function () {
+    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
         var $nav = document.querySelector("nav");
-        if ($nav) FastClick.attach($nav);
+        if($nav) FastClick.attach($nav);
     })
 </script>
 
@@ -182,17 +177,10 @@ if (navigator.serviceWorker) {
     var _gaDomain = '{{ site.ga_domain }}';
 
     // Originial
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
     ga('create', _gaId, _gaDomain);
     ga('send', 'pageview');
@@ -207,11 +195,11 @@ if (navigator.serviceWorker) {
 
     // Originial
     var _hmt = _hmt || [];
-    (function () {
-        var hm = document.createElement("script");
-        hm.src = "//hm.baidu.com/hm.js?" + _baId;
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
     })();
 </script>
 {% endif %}
@@ -220,7 +208,7 @@ if (navigator.serviceWorker) {
 <!-- Side Catalog -->
 {% if page.catalog %}
 <script type="text/javascript">
-    function generateCatalog(selector) {
+    function generateCatalog (selector) {
 
         // interop with multilangual
         if ('{{ page.multilingual }}' == 'true') {
@@ -230,7 +218,7 @@ if (navigator.serviceWorker) {
         }
 
         // init
-        var P = $(_containerSelector), a, n, t, l, i, c;
+        var P = $(_containerSelector),a,n,t,l,i,c;
         a = P.find('h1,h2,h3,h4,h5,h6');
 
         // clean
@@ -239,10 +227,10 @@ if (navigator.serviceWorker) {
         // appending
         a.each(function () {
             n = $(this).prop('tagName').toLowerCase();
-            i = "#" + $(this).prop('id');
+            i = "#"+$(this).prop('id');
             t = $(this).text();
-            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
-            l = $('<li class="' + n + '_nav"></li>').append(c);
+            c = $('<a href="'+i+'" rel="nofollow">'+t+'</a>');
+            l = $('<li class="'+n+'_nav"></li>').append(c);
             $(selector).append(l);
         });
         return true;
@@ -251,7 +239,7 @@ if (navigator.serviceWorker) {
     generateCatalog(".catalog-body");
 
     // toggle side catalog
-    $(".catalog-toggle").click((function (e) {
+    $(".catalog-toggle").click((function(e){
         e.preventDefault();
         $('.side-catalog').toggleClass("fold")
     }))
@@ -291,17 +279,17 @@ if (navigator.serviceWorker) {
     // window.addEventListener('hashchange', _render);
 
     // handle render
-    function _render(_hash) {
+    function _render(_hash){
         var _hash = _hash || window.location.hash;
         // en
-        if (_hash == "#en") {
+        if(_hash == "#en"){
             $select.selectedIndex = 1;
             $en.style.display = "block";
             $en.classList.add("active");
             $zh.style.display = "none";
             $zh.classList.remove("active");
-            // zh by default
-        } else {
+        // zh by default
+        }else{
             // not trigger onChange, otherwise cause a loop call.
             $select.selectedIndex = 0;
             $zh.style.display = "block";
@@ -314,10 +302,10 @@ if (navigator.serviceWorker) {
     }
 
     // handle select change
-    function onLanChange(index) {
-        if (index == 0) {
+    function onLanChange(index){
+        if(index == 0){
             _hash = "#zh"
-        } else {
+        }else{
             _hash = "#en"
         }
         _render(_hash)

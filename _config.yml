@@ -1,7 +1,7 @@
 # Site settings
 title: Sitoi Blog
 SEOTitle: Sitoi Blog
-header-img: img/home-bg.jpg
+header-img: img/home-bg.png
 email: Shitao0418@gmail.com
 description: "这里是 Sitoi 的个人博客"
 keyword: "Sitoi,@Sitoi"
@@ -19,7 +19,9 @@ weibo_username:     Sitoi
 zhihu_username:     Sitoi
 github_username:    Sitoi
 jianshu_username:   0289c6c3a717
-
+#linkedin_username:
+#twitter_username:
+#facebook_username:
 
 # Build settings
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
@@ -29,7 +31,7 @@ paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 # If you have timezone issue (e.g. #68) in China, uncomment to use this:
-#timezone: CN  
+timezone: CN
 
 
 
@@ -38,9 +40,9 @@ anchorjs: true                          # if you want to customize anchor. check
 # make sure you have this gem installed
 # `$ gem install jekyll-paginate`
 
-plugins: [jekyll-paginate]
+plugins: [jekyll-paginate,jekyll-sitemap]
 
-
+b2t: true
 # Markdown settings
 # replace redcarpet to kramdown,
 # although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
@@ -80,7 +82,7 @@ sidebar-avatar: /img/avatar-ny.jpg      # use absolute URL, seeing it's used in 
 
 # Featured Tags
 featured-tags: true                     # whether or not using Feature-Tags
-featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+featured-condition-size: 2              # A tag will be featured if the size of it is more than this condition value
 
 
 
