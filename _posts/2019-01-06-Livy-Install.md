@@ -9,7 +9,7 @@ catalog:    true
 tags:
     - Livy
     - 安装教程
-    - REST服务
+    - REST
     - 大数据
     - Apache
     - Spark

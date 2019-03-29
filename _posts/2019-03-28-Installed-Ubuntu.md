@@ -1,21 +1,20 @@
 ---
 layout:     post
-title:      "Ubuntu 开发环境安装"
+title:      "Ubuntu 开发环境搭建教程"
 subtitle:   ""
 date:       2019-03-28 18:46:00
 author:     "Sitoi"
-header-img: ""
+header-img: "img/post/bg/ubuntu.jpg"
 catalog:    true
 tags:
     - 开发环境
     - Ubuntu
     - Linux
-    - 安装
     - 教程
 ---
 
 
-# Ubuntu 环境搭建教程
+# Ubuntu 开发环境搭建教程
 
 #### 更新
 
@@ -39,9 +38,7 @@ ssh-keygen -t rsa -C "shitao0418@gamil.com"
 sudo apt install vim
 ```
 
-## 配置
-
-### 免 sudo 密码
+#### 免 sudo 密码
 
 ```bash
 echo -e 'Defaults:shitao !requiretty\nshitao ALL = (root) NOPASSWD:ALL' | sudo tee /etc/sudoers.d/shitao
@@ -61,7 +58,7 @@ sudo apt install htop
 sudo apt-get install openssh-server openssh-client
 ```
 
-#### jdk java开发环境
+#### jdk java 开发环境
 
 ```bash
 sudo apt install openjdk-8-jdk 
@@ -97,11 +94,17 @@ sudo apt install net-tools
 sudo apt install docker.io
 ```
 
-#### 中文输入法
+#### ibus-pinyin 中文输入法
 
 ```bash
 sudo apt install ibus-pinyin
 ```
+
+- 重启系统
+
+- 进入语言设置
+
+- 选择中文输入法 `chines` 然后找 `pinyin`
 
 #### chromium 浏览器
 
@@ -121,6 +124,11 @@ sudo apt install htop openssh-server openssh-client openjdk-8-jdk python3 python
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 ```
 
+#### 安装 npm
+
+```bash
+nvm install node
+```
 
 ## 更换源
 
@@ -138,10 +146,24 @@ vim ~/.pip/pip.conf
 index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
-
 #### 更换 maven 源
 
-TODO
+> 进入 `maven` 文件夹，在 `conf` 目录中找到 `settings.xml` 文件
+
+```bash
+sudo vim /usr/share/maven/conf/settings.xml
+```
+
+> 配置 `mirrors` 的子节点，添加如下 `mirror`
+
+```xml
+<mirror>
+    <id>nexus-aliyun</id>
+    <mirrorOf>central</mirrorOf>
+    <name>Nexus aliyun</name>
+    <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+</mirror>
+```
 
 
 #### 更换 npm 源
@@ -167,3 +189,8 @@ sudo vim /etc/docker/daemon.json
 }
 ```
 
+#### 更换 gem 源
+
+```bash
+sudo gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/
+```

@@ -4,7 +4,7 @@ title:      "Dockerfile 创建镜像教程"
 subtitle:   ""
 date:       2018-10-02 18:17:00
 author:     "Sitoi"
-header-img: ""
+header-img: "img/post/bg/docker.png"
 catalog:    true
 tags:
     - Docker

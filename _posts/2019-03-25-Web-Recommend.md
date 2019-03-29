@@ -4,7 +4,7 @@ title:      "网站 & APP 安利"
 subtitle:   ""
 date:       2019-03-25 18:46:00
 author:     "Sitoi"
-header-img: "img/images/web&app.jpg"
+header-img: "img/post/bg/web&app.jpg"
 catalog:    true
 tags:
     - 资源

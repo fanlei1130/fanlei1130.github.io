@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "GitHub Flavored Markdown"
+title:      "Markdown 代码规范 （GFM）"
 subtitle:   ""
 date:       2018-09-22 18:17:00
 author:     "Sitoi"
@@ -10,8 +10,6 @@ tags:
     - MarkDown
     - Github
     - 规范
-    - 介绍
-    - 教程
 ---
 
 # GFM

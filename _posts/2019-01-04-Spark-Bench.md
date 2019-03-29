@@ -8,7 +8,7 @@ header-img: ""
 catalog:    true
 tags:
     - Spark
-    - 基准测试
+    - 测试
     - 教程
     - 计算引擎
     - 大数据

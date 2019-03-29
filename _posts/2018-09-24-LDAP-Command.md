@@ -9,7 +9,7 @@ catalog:    true
 tags:
     - OpenLDAP
     - 权限验证
-    - Command
+    - 命令
 ---
 
 

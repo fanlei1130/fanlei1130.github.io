@@ -4,7 +4,7 @@ title:      "Docker-Compose 创建容器教程"
 subtitle:   ""
 date:       2018-10-03 18:17:00
 author:     "Sitoi"
-header-img: ""
+header-img: "img/post/bg/docker.png"
 catalog:    true
 tags:
     - Docker
