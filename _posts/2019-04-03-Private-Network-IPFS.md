@@ -21,12 +21,12 @@ tags:
 
 ## 步骤
 
-- 通过docker 创建 IPFS 容器
+- 通过 docker 创建 IPFS 容器
 - 确保配置 IPFS API 以允许跨源（CORS）请求
 - 移除默认的 boostrap 节点
 - 重启服务
 
-### 通过docker 创建 IPFS 容器
+### 通过 docker 创建 IPFS 容器
 
 运行 make 命令
 
