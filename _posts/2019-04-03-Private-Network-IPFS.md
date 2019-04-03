@@ -4,7 +4,7 @@ title:      "利用 Docker 搭建 IPFS 私有网络"
 subtitle:   ""
 date:       2019-04-03 12:04:00
 author:     "Sitoi"
-header-img: "img/post/bg/ubuntu.jpg"
+header-img: "img/post/images/IPFS.png"
 catalog:    true
 tags:
     - IPFS
@@ -13,10 +13,7 @@ tags:
 ---
 
 
-# 搭建 IPFS 私有网络
-
-
-# 搭建 IPFS 私有网络
+# 利用 Docker 搭建 IPFS 私有网络
 
 下载项目
 
