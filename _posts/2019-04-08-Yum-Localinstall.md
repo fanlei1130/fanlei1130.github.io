@@ -18,13 +18,13 @@ tags:
 使用命令：
 
 ```bash
-rpm -ivh xxx.rpm
+sudo rpm -ivh xxx.rpm
 ```
 
 > 这样安装可能会出现很多依赖关系需要解决。为了能使软件安装过程中自动解决依赖关系，我们可以使用命令：
 
 ```bash
-yum -y localinstall xxx.rpm
+sudo yum -y localinstall xxx.rpm
 ```
 
 在安装的同时自动解决有关依赖关系。
