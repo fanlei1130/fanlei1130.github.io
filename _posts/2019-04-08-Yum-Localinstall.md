@@ -7,6 +7,7 @@ author:     "Sitoi"
 header-img: ""
 catalog:    true
 tags:
+    - Linux
     - yum
     - rpm
 ---
