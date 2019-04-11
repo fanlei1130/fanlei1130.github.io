@@ -36,6 +36,12 @@ nvm install node
 
 ## 安装 GitBook
 
+> 更换 npm 源
+
+```bash
+npm config set registry https://registry.npm.taobao.org
+```
+
 ```bash
 npm install -g gitbook-cli
 ```
