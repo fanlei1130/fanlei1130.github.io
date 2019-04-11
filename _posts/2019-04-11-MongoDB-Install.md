@@ -2,7 +2,7 @@
 layout:     post
 title:      "Fedora 安装 MongoDB 教程"
 subtitle:   ""
-date:       2019-04-01 20:04:00
+date:       2019-04-11 20:04:00
 author:     "Sitoi"
 header-img: ""
 catalog:    true
