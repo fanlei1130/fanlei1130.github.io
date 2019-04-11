@@ -9,6 +9,7 @@ catalog:    true
 tags:
     - Linux
     - GitBook
+    - 安装教程
 ---
 
 # Ubuntu 安装 GitBook 教程
