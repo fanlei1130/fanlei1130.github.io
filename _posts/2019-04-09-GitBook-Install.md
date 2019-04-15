@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Ubuntu 安装 GitBook 教程"
+title:      "Fedora 29 安装 GitBook 教程"
 subtitle:   ""
 date:       2019-04-09 14:04:00
 author:     "Sitoi"
@@ -12,7 +12,7 @@ tags:
     - 安装教程
 ---
 
-# Ubuntu 安装 GitBook 教程
+# Fedora 29 安装 GitBook 教程
 
 ## 安装 nvm
 
@@ -57,5 +57,5 @@ npm install -g svgexport --unsafe-perm
 安装 calibre
 
 ```bash
-sudo apt install calibre
+sudo dnf install calibre
 ```
