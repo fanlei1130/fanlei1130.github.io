@@ -1,14 +1,14 @@
 {
-  "name": "Sitoi-blog",
-  "title": "Sitoi Blog",
-  "author": "sitoi <Shitao0418@gmail.com>",
+  "name": "FanLei-blog",
+  "title": "FanLei Blog",
+  "author": "FanLei <625768898@qq.com>",
   "version": "1.7.0",
-  "homepage": "http://sitoi.github.io",
+  "homepage": "http://fanlei1130.github.io",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sitoi/sitoi.github.io"
+    "url": "https://github.com/fanlei1130/fanlei1130.github.io"
   },
-  "bugs": "https://github.com/sitoi/sitoi.github.io/issues",
+  "bugs": "https://github.com/fanlei1130/fanlei1130.github.io/issues",
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-contrib-less": "~0.11.4",

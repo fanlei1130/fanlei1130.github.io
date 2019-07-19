@@ -2,8 +2,8 @@
 layout:     post
 title:      "Markdown 代码规范 （GFM）"
 subtitle:   ""
-date:       2018-09-22 18:17:00
-author:     "Sitoi"
+date:       2019-07-19 23:50:00
+author:     "范磊"
 header-img: ""
 catalog:    true
 tags:

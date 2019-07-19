@@ -1,23 +1,23 @@
 # Site settings
-title: Sitoi Blog
-SEOTitle: Sitoi Blog
+title: FanLei Blog
+SEOTitle: FanLei Blog
 header-img: img/home-bg.png
-email: Shitao0418@gmail.com
-description: 这里是 Sitoi 的个人博客
-keyword: Sitoi,@Sitoi
-url: http://www.sitoi.cn
+email: 625768898@qq.com
+description: 这里是 FanLei 的个人博客
+keyword: FanLei,@FanLei
+url: http://fanlei1130.github.io
 baseurl: ''                                                # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: https://github.com/Sitoi/Sitoi.github.io.git  # you code repository
+github_repo: https://github.com/fanlei1130/fanlei1130.github.io.git  # you code repository
 
 # Publish posts or collection documents with a future date.
 future: true
 
 # SNS settings
 RSS: false
-weibo_username: Sitoi
-zhihu_username: Sitoi
-github_username: Sitoi
-jianshu_username: 0289c6c3a717
+#weibo_username: FanLei
+#zhihu_username: FanLei
+github_username: fanlei1130
+#jianshu_username: FanLei
 #linkedin_username:
 #twitter_username:
 #facebook_username:
@@ -57,23 +57,23 @@ kramdown:
 
 
 # Gitalk
-gitalk:
-  enable: true
-  clientID: 1b0731e0808d896e90d0
-  clientSecret: 87469f10106f36b678ce27fb55b8c9c75fe31799
-  repo: Sitoi.github.io
-  owner: sitoi
-  admin: sitoi
-  distractionFreeMode: true
+#gitalk:
+#  enable: true
+#  clientID: xxxxxxxxxx
+#  clientSecret: xxxxxxxxxxxxxx
+#  repo: fanlei1130.github.io
+#  owner: FanLei
+#  admin: FanLei
+#  distractionFreeMode: true
 
 
 # Analytics settings
 # Baidu Analytics
-ba_track_id: d4c40f46c05ffceaf7416ed88be4e462
+#ba_track_id: xxxxxxxxxxxxxxx
 
 # Google Analytics
-ga_track_id: UA-136865061-1            # Format: UA-xxxxxx-xx
-ga_domain: sitoi.cn
+#ga_track_id: xxxxxxxxxx           # Format: UA-xxxxxx-xx
+#ga_domain: xxxxxxxxxxxx
 
 # Sidebar settings
 sidebar: true                          # whether or not using Sidebar.
@@ -96,7 +96,5 @@ page-mathjax: false
 
 # Friends
 friends:
-  - title: 小仙女
-    href: https://yejingwen.cn
-  - title: WangQian
-    href: https://github.com/wangqian0306
+  - title: Sitoi
+    href: http://www.sitoi.cn
