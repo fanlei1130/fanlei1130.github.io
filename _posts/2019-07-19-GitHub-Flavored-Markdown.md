@@ -4,7 +4,7 @@ title:      "Markdown 代码规范 （GFM）"
 subtitle:   ""
 date:       2019-07-19 23:50:00
 author:     "范磊"
-header-img: ""
+header-img: ".img/post/bg/web&app.jpg"
 catalog:    true
 tags:
     - MarkDown
